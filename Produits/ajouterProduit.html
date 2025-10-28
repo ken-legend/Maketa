@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter Produit | Maketa</title>
+  <link rel="stylesheet" href="./ajoute_Produit.css">
+  <link rel="stylesheet" href="/Produits/CSS/produitPost.css">
+</head>
+<!-- ===== Navigation en bas ===== -->
+<nav class="bottom-nav">
+  <a href="/Produits/produitPost.html" class="nav-item active">
+    <img src="/Produits/icon svg/home.svg" alt="Accueil">
+    <span>Accueil</span>
+  </a>
+
+  <a href="/Produits/produitPost.html" class="nav-item">
+    <img src="/Produits/icon svg/marche.svg" alt="Marché">
+    <span>Marché</span>
+  </a>
+
+  <a href="/Produits/ajouterProduit.html" class="nav-item">
+    <img src="/Produits/icon svg/add.svg" alt="Publier">
+    <span>Publier</span>
+  </a>
+
+  <a href="/connexion/conex.html" class="nav-item">
+    <img src="/Produits/icon svg/user.svg" alt="Profil">
+    <span>Profil</span>
+  </a>
+</nav>
+
+<body>
+
+
+  <main>
+    <h1>Publier un nouveau produit</h1>
+    <form id="addProductForm">
+      <label>Nom du produit :</label>
+      <input type="text" id="titre" required placeholder="Nom du produit">
+
+      <label>Catégorie :</label>
+      <select id="categorie" required>
+        <option value="Électronique">Électronique</option>
+        <option value="Vêtements">Vêtements</option>
+        <option value="Alimentation">Alimentation</option>
+        <option value="Maison">Maison</option>
+        <option value="Autre" selected>Autre</option>
+      </select>
+
+      <label>Description :</label>
+      <textarea id="description" required placeholder="Description du produit"></textarea>
+
+      <label>Importer une image :</label>
+      <input type="file" id="imageFile" accept="image/*">
+
+      <div class="camera-section">
+        <button type="button" id="cameraIcon">📷</button>
+        <video id="video" autoplay></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+      </div>
+
+      <button type="submit" class="submit-btn">Ajouter le produit</button>
+    </form>
+
+    <p id="message"></p>
+    <a href="/Produits/produitPost.html" class="link-produits">Voir tous les produits</a>
+  </main>
+
+  <script src="./JS/ajouter-produit.js"></script>
+</body>
+</html>

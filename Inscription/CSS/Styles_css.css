@@ -1,0 +1,200 @@
+/* Variables */
+:root {
+    --primary-color: #ff6600;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --input-bg: #f9f9f9;
+    --input-border: #ccc;
+}
+
+/* Body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+/* Bouton principal */
+nav .btn1 {
+    padding: 8px 15px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+nav .btn1:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
+}
+
+/* ---------------- FORMULAIRE ---------------- */
+.inscrip-container {
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 35px 30px;
+    border-radius: 12px;
+    background-color: #fff7f0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.inscrip-form h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.inscrip-form p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.inscrip-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.inscrip-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+    font-size: 1rem;
+}
+
+.inscrip-form button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.inscrip-form button[type="submit"]:hover {
+    background-color: #e65c00;
+    transform: translateY(-2px);
+}
+
+/* Checkbox custom */
+.term-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 28px;
+    font-size: 14px;
+    color: #191930;
+    margin-bottom: 20px;
+}
+
+.term-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.term-checkbox input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.term-checkbox input:checked ~ .checkmark::after {
+    display: block;
+}
+
+.term-checkbox .checkmark::after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Liens */
+.aa {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.aa:hover {
+    text-decoration: underline;
+}
+
+/* Message erreur/succès */
+.message {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: none;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Lien pour se connecter */
+.ba {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ba:hover {
+    text-decoration: underline;
+}
+
+/* Responsive simple */
+@media(max-width: 480px){
+    header.hea1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav.navigation1 ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .inscrip-container {
+        margin: 30px 10px;
+        padding: 25px;
+    }
+}

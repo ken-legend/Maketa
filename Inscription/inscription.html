@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>page-inscription</title>
+    <link rel="stylesheet" href="./CSS/Styles_css.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/style_hero_test.css">
+</head>
+<body>
+  <header class="hea1">
+    <div class="logo">
+      <img src="/Images/LOGO_MAKETA.png" alt="">Maketa
+    </div>
+    <nav class="navigation1">
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="/connexion/conex.html">Connexion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+        <div class="inscrip-container">
+            <form class="inscrip-form" id="inscripForm">
+                <h2>Bienvenue a bord!</h2>
+                <p>Creer votre compte</p>
+                    <label for="prenom">Nom d'utilisateur</label>
+                <input type="text" id="prenom" placeholder="Entrer un nom d'utilisateur" required>
+                    <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Entrer votre email" required>
+                    <label for="password" >Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="Entrer un mot de passe" pattern=".{6,}" title="Le mot de passe doit contenir au moins 6 caracteres" required>
+                    <label for="confirmPassword">Confirmer le mot de passe</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmer votre mot de passe" pattern=".{6,}" title="Le mot de passe doit contenir au moins 6 caracteres" required>
+                    <label class="term-checkbox">
+                        <input type="checkbox" id="terms" required><span class="checkmark"></span>  En creant un compte, j'accepte les <a class="aa" href="#" target="_blank">Conditions d'utilisation</a> et la <a class="aa" href="#" target="_blank">Politique de confidentialite</a> de <strong>Maketa</strong>.
+                        
+                    </label>
+               
+            <button type="submit">S'inscrire</button>
+           <br> <center> <h5>Deja un compte?<a class="ba" href="/connexion/conex.html" class="ins"> Connecter</a></h5></center>    
+            </form>
+                        <div id="message" class="message"></div>
+
+        </div>
+                   
+
+</body>
+</html>

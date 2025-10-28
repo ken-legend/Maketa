@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="#ff6600">
+  <!-- Toit triangulaire -->
+  <polygon points="8,24 32,4 56,24" stroke="#ff6600" stroke-width="2" fill="#ff6600"/>
+  
+  <!-- Corps du marché -->
+  <rect x="12" y="24" width="40" height="28" fill="#ff6600" stroke="#ff6600" stroke-width="2"/>
+  
+  <!-- Étals / sections -->
+  <rect x="16" y="28" width="8" height="20" fill="#fff"/>
+  <rect x="28" y="28" width="8" height="20" fill="#fff"/>
+  <rect x="40" y="28" width="8" height="20" fill="#fff"/>
+  
+  <!-- Porte centrale -->
+  <rect x="28" y="36" width="8" height="16" fill="#ff6600"/>
+</svg>

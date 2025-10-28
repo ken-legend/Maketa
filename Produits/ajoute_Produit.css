@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.logo img {
+  height: 40px;
+}
+
+main {
+  max-width: 500px;
+  background: white;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+input, textarea, select {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background: #e55a00;
+}
+
+#message {
+  margin-top: 15px;
+  color: green;
+  text-align: center;
+}
+
+.link-produits {
+  display: block;
+  text-align: center;
+  color: #ff6600;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.camera-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#cameraIcon {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff6600;
+}
+
+#video {
+  display: none;
+  margin-top: 10px;
+  border-radius: 10px;
+}
