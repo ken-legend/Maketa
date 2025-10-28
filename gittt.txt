@@ -4,7 +4,7 @@ git status
 # Ajouter les fichiers modifiés
 git add .
 # ou ajouter un fichier spécifique
-git add nom-du-fichier.html
+#git add nom-du-fichier.html
 
 # Créer un commit avec un message descriptif
 git commit -m "Description des modifications"
