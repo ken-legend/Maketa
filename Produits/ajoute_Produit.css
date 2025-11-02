@@ -38,6 +38,7 @@ main {
 h1 {
   text-align: center;
   color: #333;
+  font-size: 23px;
 }
 
 form label {

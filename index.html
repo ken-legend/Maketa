@@ -38,14 +38,14 @@
   <!-- Header -->
   <header class="hea1">
     <div class="logo">
-      <img src="../Maketa-Projet/Images/LOGO_MAKETA.png" alt="">Maketa
+      <img src="./Images/LOGO_MAKETA.png" alt="">Maketa
     </div>
     <nav class="navigation1">
       <ul>
         <button class="btn1">Publicité payée</button>
         <li><a href="Produits/produitPost.html">Accueil</a></li>
         <li><a href="#">Catégories</a></li>
-        <li><a href="Produits/ajouterProduit.html">Publier une annonce</a></li>
+        <li><a href="./Produits/ajouterProduit.html">Publier une annonce</a></li>
         <li><a href="connexion/conex.html">Connexion / Inscription</a></li>
       </ul>
     </nav>
@@ -53,11 +53,11 @@
 
   <header class="hea2">
     <div class="logo">
-      <img src="../Maketa-Projet/Images/LOGO_MAKETA.png" alt="">Maketa
+      <img src="./Images/LOGO_MAKETA.png" alt="">Maketa
     </div>
     <nav class="navigation2">
       <ul>
-        <button class="btn1">Publier une annonce</button>
+        <button class="btn1" id="publiee">Publier une annonce</button>
       </ul>
     </nav>
   </header>
@@ -105,6 +105,12 @@
 
   <!-- JS -->
   <script src="JS/JS_index.js"></script>
+  <script>
+    const publiee=document.getElementById('publiee');
+    publiee.addEventListener('click',function(){
+      window.location.href="./Produits/ajouterProduit.html";
+    })
+  </script>
 
 </body>
 </html>

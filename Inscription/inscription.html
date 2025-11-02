@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./CSS/Styles_css.css">
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/style_hero_test.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
 </head>
 <body>
   <header class="hea1">
@@ -17,6 +18,17 @@
       <ul>
         <li><a href="../index.html">Accueil</a></li>
         <li><a href="/connexion/conex.html">Connexion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <header class="hea2">
+    <div class="logo">
+      <img src="../Images/LOGO_MAKETA.png" alt="">Maketa
+    </div>
+    <nav class="navigation2">
+      <ul>
+     <button class="btn1" id="anubtn">X</button>
       </ul>
     </nav>
   </header>
@@ -46,5 +58,14 @@
         </div>
                    
 
+          <script>
+    const anubtn=document.getElementById('anubtn');
+anubtn.addEventListener('click',function(){
+    const confirmation=confirm("Voulez-vous vraiment annuler ?");
+  if(confirmation){
+ window.history.back();
+  }
+});
+  </script>
 </body>
 </html>

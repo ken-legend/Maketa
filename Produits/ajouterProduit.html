@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajouter Produit | Maketa</title>
   <link rel="stylesheet" href="./ajoute_Produit.css">
-  <link rel="stylesheet" href="/Produits/CSS/produitPost.css">
+  <link rel="stylesheet" href="../CSS/style_hero_test.css">
+  <link rel="stylesheet" href="./CSS/produitPost.css">
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/responsive.css">
 </head>
 <!-- ===== Navigation en bas ===== -->
 <nav class="bottom-nav">
@@ -32,35 +35,63 @@
 
 <body>
 
+  
+  <!-- Header -->
+  <header class="hea1">
+    <div class="logo">
+      <img src="../Images/LOGO_MAKETA.png" alt="">Maketa
+    </div>
+    <nav class="navigation1">
+      <ul>
+        
+       <button class="btn1" id="btnAnnuler">Annuler</button>
+
+      </ul>
+    </nav>
+  </header>
+
+  <header class="hea2">
+    <div class="logo">
+      <img src="../Images/LOGO_MAKETA.png" alt="">Maketa
+    </div>
+    <nav class="navigation2">
+      <ul>
+     <button class="btn1" id="anubtn">X</button>
+      </ul>
+    </nav>
+  </header>
+
 
   <main>
-    <h1>Publier un nouveau produit</h1>
+    <h1>Publier un nouveau produit / Service</h1>
     <form id="addProductForm">
-      <label>Nom du produit :</label>
-      <input type="text" id="titre" required placeholder="Nom du produit">
+      <label>Nom du produit / Service :</label>
+      <input type="text" id="titre" required placeholder="Nom du produit / Service">
 
       <label>Catégorie :</label>
       <select id="categorie" required>
         <option value="Électronique">Électronique</option>
-        <option value="Vêtements">Vêtements</option>
+        <option value="Vêtements">Vêtements et Mode</option>
         <option value="Alimentation">Alimentation</option>
-        <option value="Maison">Maison</option>
+        <option value="Maison">Maison et Jardin</option>
+        <option value="Véhicules">Véhicules</option>
+        <option value="Informatique">Informatique</option>
         <option value="Autre" selected>Autre</option>
       </select>
 
       <label>Description :</label>
-      <textarea id="description" required placeholder="Description du produit"></textarea>
+      <textarea id="description" required placeholder="Description du produit / Service"></textarea>
 
       <label>Importer une image :</label>
       <input type="file" id="imageFile" accept="image/*">
 
-      <div class="camera-section">
-        <button type="button" id="cameraIcon">📷</button>
+      <!--<div class="camera-section">
+        <button type="button" id="cameraIcon"></button>
         <video id="video" autoplay></video>
         <canvas id="canvas" style="display:none;"></canvas>
-      </div>
+      </div>-->
 
-      <button type="submit" class="submit-btn">Ajouter le produit</button>
+      <button type="submit" class="submit-btn">Publier</button>
     </form>
 
     <p id="message"></p>
@@ -68,5 +99,23 @@
   </main>
 
   <script src="./JS/ajouter-produit.js"></script>
+  <script>
+    const btnAnnuler=document.getElementById('btnAnnuler');
+btnAnnuler.addEventListener('click',function(){
+  const confirmation=confirm("Voulez-vous vraiment annuler et revenir a la page precedente ?");
+  if(confirmation){
+ window.history.back();
+  }
+});
+  </script>
+  <script>
+    const anubtn=document.getElementById('anubtn');
+anubtn.addEventListener('click',function(){
+    const confirmation=confirm("Voulez-vous vraiment annuler ?");
+  if(confirmation){
+ window.history.back();
+  }
+});
+  </script>
 </body>
 </html>

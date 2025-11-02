@@ -8,29 +8,9 @@
     <link rel="stylesheet" href="/Inscription/CSS/Styles_css.css">
     <link rel="stylesheet" href="../CSS/style_hero_test.css">
     <link rel="stylesheet" href="/Produits/CSS/produitPost.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
 </head>
-<!-- ===== Navigation en bas ===== -->
-<nav class="bottom-nav">
-  <a href="/Produits/produitPost.html" class="nav-item active">
-    <img src="/Produits/icon svg/home.svg" alt="Accueil">
-    <span>Accueil</span>
-  </a>
 
-  <a href="/Produits/produitPost.html" class="nav-item">
-    <img src="/Produits/icon svg/marche.svg" alt="Marché">
-    <span>Marché</span>
-  </a>
-
-  <a href="/Produits/ajouterProduit.html" class="nav-item">
-    <img src="/Produits/icon svg/add.svg" alt="Publier">
-    <span>Publier</span>
-  </a>
-
-  <a href="/connexion/conex.html" class="nav-item">
-    <img src="/Produits/icon svg/user.svg" alt="Profil">
-    <span>Profil</span>
-  </a>
-</nav>
 
 <body>
 
@@ -45,6 +25,16 @@
         </ul>
     </nav>
 </header>
+  <header class="hea2">
+    <div class="logo">
+      <img src="../Images/LOGO_MAKETA.png" alt="">Maketa
+    </div>
+    <nav class="navigation2">
+      <ul>
+     <button class="btn1" id="anubtn">X</button>
+      </ul>
+    </nav>
+  </header>
 
 <div class="login-container">
     <form class="login-form" id="loginForm">
@@ -62,4 +52,15 @@
         <div id="message" class="message"></div>
             <br> <center> <h5>Pas de compte?<a class="ba" href="/Inscription/inscription.html" class="ins"> S'inscrire</a></h5></center> 
         </form>
+
+          <script>
+    const anubtn=document.getElementById('anubtn');
+anubtn.addEventListener('click',function(){
+    const confirmation=confirm("Voulez-vous vraiment annuler ?");
+  if(confirmation){
+ window.history.back();
+  }
+});
+  </script>
+  </body>
 </html>

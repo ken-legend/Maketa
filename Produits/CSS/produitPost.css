@@ -7,13 +7,13 @@ body {
 .hade {
   background: #ff6600;
   color: white;
-  text-align:center;
+  text-align:left;
   padding: 0.1rem;
 }
 
 #produits-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -139,10 +139,10 @@ button:hover {
 
 
 
-/* --- Style pour la section titre + recherche --- */
+/* --- Header titre + recherche --- */
 .hade {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* titre à gauche, recherche à droite */
   align-items: center;
   padding: 15px 40px;
   background: #fff;
@@ -150,30 +150,24 @@ button:hover {
   flex-wrap: wrap;
 }
 
-.hade-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.hade-content h2 {
+.hade h2 {
   color: #333;
   font-size: 24px;
   margin: 0;
 }
 
-/* --- Style de la barre de recherche --- */
+/* --- Barre de recherche --- */
 .search-bar {
   display: flex;
-  align-items: center;
+  align-items: center; /* aligner verticalement */
   gap: 10px;
 }
 
+/* Input */
 .search-bar input {
   padding: 10px 15px;
   border: 2px solid #ff6600;
-  border-radius: 8px;
+  border-radius: 8px 0 0 8px;
   font-size: 16px;
   outline: none;
   transition: 0.3s;
@@ -183,12 +177,13 @@ button:hover {
   box-shadow: 0 0 5px #ff6600;
 }
 
+/* Bouton */
 .search-bar button {
   background: #ff6600;
   color: white;
   border: none;
   padding: 10px 15px;
-  border-radius: 8px;
+  border-radius: 0 8px 8px 0;
   cursor: pointer;
   font-size: 16px;
   transition: 0.3s;
@@ -200,19 +195,19 @@ button:hover {
 
 /* --- Responsive --- */
 @media (max-width: 700px) {
-  .hade-content {
-    flex-direction:row;
-    align-items: flex;
+  .hade {
+    flex-direction: column; /* barre en dessous du titre sur mobile */
+    align-items: flex-start;
     gap: 10px;
   }
 
   .search-bar {
-    width: 100%;
-    justify-content: flex;
+    width: 65%;
+    justify-content: flex-start; /* pleine largeur sur mobile */
   }
 
   .search-bar input {
-    width: 70%;
+    flex: 6; /* prend tout l'espace disponible */
   }
 }
 

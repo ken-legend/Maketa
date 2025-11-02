@@ -106,3 +106,4 @@ form.addEventListener("submit", (e) => {
     reader.onload();
   }
 });
+
