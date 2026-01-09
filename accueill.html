@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maketa - Tout ce dont vous avez besoin</title>
+  <!-- CSS relatifs -->
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/style_hero_test.css">
+  <link rel="stylesheet" href="CSS/responsive.css">
+  <link rel="stylesheet" href="Produits/CSS/produitPost.css">
+</head>
+<body>
+
+  <!-- ===== Navigation en bas (mobile) ===== -->
+  <nav class="bottom-nav mobile-only">
+    <a href="index.html" class="nav-item active">
+      <img src="Produits/icon svg/home.svg" alt="Accueil">
+      <span>Accueil</span>
+    </a>
+
+    <a href="Produits/produitPost.html" class="nav-item">
+      <img src="Produits/icon svg/marche.svg" alt="Marché">
+      <span>Marché</span>
+    </a>
+
+    <a href="Produits/ajouterProduit.html" class="nav-item">
+      <img src="Produits/icon svg/add.svg" alt="Publier">
+      <span>Publier</span>
+    </a>
+
+    <a href="connexion/conex.html" class="nav-item">
+      <img src="Produits/icon svg/user.svg" alt="Profil">
+      <span>Profil</span>
+    </a>
+  </nav>
+
+  <!-- Header -->
+  <header class="hea1">
+    <div class="logo">
+      <img src="./Images/LOGO_MAKETA.png" alt="">Maketa
+    </div>
+    <nav class="navigation1">
+      <ul>
+        <button class="btn1">Publicité payée</button>
+        <li><a href="Produits/produitPost.html">Accueil</a></li>
+        <li><a href="#">Le Marché</a></li>
+        <li><a href="./Produits/ajouterProduit.html">Publier une annonce</a></li>
+        <li><a href="connexion/conex.html">Connexion / Inscription</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="hea2">
+    <div class="logo">
+      <img src="./Images/LOGO_MAKETA.png" alt=""><h3 class="malita">Maketa</h3> 
+    </div>
+    <nav class="navigation2">
+      <ul>
+        <button class="btn1" id="publiee">Publier une annonce</button>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Achetez. Vendez. Vos Produits et Services Localement.</h1>
+    <p class="slogan" id="slogan">Tout ce dont vous avez besoin. Tout près de vous !</p><br>
+    <a href="./Produits/produitPost.html"><button>Commencer maintenant</button></a>
+  </section>
+  
+  <!-- Catégories -->
+  <section class="categories">
+    <h2>Catégories populaires</h2>
+    <ul>
+      <li id="Électronique">Électronique</li>
+      <li id="Mode">Mode et Vêtements</li>
+      <li id="Maison">Maison & Jardin</li>
+      <li id="Service">Services</li>
+      <li id="Véhicules">Véhicules</li>
+      <li id="Autre">Autres...</li>
+    </ul>
+  </section>
+
+  <!-- Pourquoi Maketa -->
+  <section class="why">
+    <h2>Pourquoi choisir Maketa ?</h2>
+    <ul>
+      <li>✔️ Simple à utiliser</li>
+      <li>✔️ Annonces locales vérifiées</li>
+      <li>✔️ Gratuit pour les particuliers</li>
+      <li>✔️ Visibilité rapide dans votre ville</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Maketa. Tous droits réservés.</p>
+    <nav>
+      <a href="#">À propos</a> |
+      <a href="#">Contact</a> |
+      <a href="#">Conditions</a>
+    </nav>
+    <br><br>
+  </footer>
+
+  <!-- JS -->
+  <script src="JS/JS_index.js"></script>
+  <script>
+    const publiee=document.getElementById('publiee');
+    publiee.addEventListener('click',function(){
+      window.location.href="./Produits/ajouterProduit.html";
+    })
+  </script>
+
+</body>
+</html>

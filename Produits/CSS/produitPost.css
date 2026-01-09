@@ -10,6 +10,282 @@ body {
   text-align:left;
   padding: 0.1rem;
 }
+.nou{
+  background-color: #ffa930a3;
+}
+
+  .profil_haut {
+  width: 38px;
+  height: 42px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profil_haut:hover {
+  transform: scale(1.12);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.profil_haut:active {
+  transform: scale(0.92);
+}
+
+
+
+
+/* NAVBAR */
+.navSea {
+  width: 98%;
+  padding: 25px 25px;
+  background-color: #1e1e1e44;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  margin: 15px;
+  
+  border-radius: 50px;
+ position: relative;
+  z-index: 999;
+}
+.navSea :hover{
+  cursor: pointer;
+  
+}
+/* BARRE DE RECHERCHE 2 */
+.search-bar2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.search-bar2 input {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 30px 0 0 30px;
+}
+
+.search-bar2 button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0 15px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar2 button:hover {
+  background-color: #f0f0f0;
+  
+}
+
+
+
+
+
+
+#clearSearchMobile svg {
+  stroke: #ff4d4d; /* rouge pour le clear */
+}
+
+.search-bar2 svg {
+  display: block;
+}
+
+
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f2f2f2;
+  padding: 6px 10px;
+  border-radius: 25px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 6px;
+  width: 180px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#clearSearch {
+  display: none;
+  color: #888;
+}
+
+
+/*
+.suggestions {
+  font-size:medium;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 5px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 5px 0;
+  display: none;
+  z-index: 100;
+}
+
+.suggestions li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background: #f2f2f2;
+}
+.suggestions li.active {
+  background: #eaeaea;
+}
+/* Style commun pour les boutons clear */
+/* On cache le bouton par défaut */
+#clearSearchDesktop,
+#clearSearchMobile {
+  display: none; 
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+#clearSearchDesktop svg,
+#clearSearchMobile svg {
+  stroke: #ff0000;
+  fill: none;
+  width: 16px;
+  height: 16px;
+}
+
+
+
+
+
+
+
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Box suggestions */
+.suggestions {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  display: none;
+  max-height: 280px;
+  overflow-y: auto;
+  animation: fadeSlide .25s ease;
+  z-index: 999;
+}
+
+/* Item */
+.suggestions li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.suggestions li:hover {
+  background: #f2f2f2;
+}
+
+/* Image */
+.suggestions img {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Text */
+.suggestions .info {
+  flex: 1;
+}
+
+.suggestions .info span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.suggestions .info small {
+  color: #777;
+  font-size: 12px;
+}
+
+/* Animation */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/*NAVBAR*/
+
+
+
+
+
+
+
+
+
 
 #produits-container {
   display: grid;
@@ -47,6 +323,100 @@ body {
   padding: 10px 15px;
   border-top: 1px solid #eee;
 }
+
+
+/* nouvo produit container*/
+/* Slider global */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+/* Slider global */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+/* Slider des produits */
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+/* Cacher la barre de scroll */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Carte produit (taille fixe) */
+.slider .produit {
+  flex: 0 0 220px; /* largeur fixe, pas de rétrécissement */
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.slider .produit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Boutons slider */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-0%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+
+.slider-btn:hover {
+  background: #fff;
+}
+/* Points du slider */
+.slider-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.slider-dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slider-dots span.active {
+  background-color: #333; /* point actif */
+}
+
+
+
+
 
 /* Boutons */
 button {
@@ -191,7 +561,45 @@ button:hover {
 
 .search-bar button:hover {
   background: #e65c00;
+
 }
+
+
+
+.panier-flottant {
+  position: fixed;
+  bottom: 20px;
+  right: 10px; /* Valeur initiale */
+  background-color: #ff6b6b;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 9999; /* IMPORTANT pour être au-dessus de tout */
+}
+
+.panier-flottant span.count {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Touch-friendly */
+@media (max-width: 768px) {
+  .panier-flottant {
+    bottom: 15px;
+    right: 15px;
+    padding: 12px 16px;
+    gap: 8px;
+  }
+}
+
+
+
+
 
 /* --- Responsive --- */
 @media (max-width: 700px) {
@@ -208,6 +616,9 @@ button:hover {
 
   .search-bar input {
     flex: 6; /* prend tout l'espace disponible */
+  }
+  .navSea{
+    display: none;
   }
 }
 
@@ -418,7 +829,7 @@ button:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
   z-index: 9999;
-  margin-bottom: 37px;
+  margin: 10px;
 }
 
 .panier-flottant:hover {
@@ -561,28 +972,4 @@ button:hover {
 }
 .finaliser:hover {
   background: #e55b00;
-}
-
-
-/* ===========================
-   🔸 Notifications Maketa
-=========================== */
-.notif-panier {
-  position: fixed;
-  bottom: 95px;
-  right: 30px;
-  color: #fff;
-  padding: 14px 20px;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  opacity: 0;
-  transform: translateY(25px) scale(0.95);
-  transition: all 0.35s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  z-index: 10000;
-}
-.notif-panier.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
 }
