@@ -1,7 +1,19 @@
 /* Header */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.hea2 {
+  display: flex;
+  justify-content:space-between;
   align-items: center;
   padding: 15px 30px;
   background-color: #ffffff;
